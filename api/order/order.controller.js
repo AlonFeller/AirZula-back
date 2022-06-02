@@ -45,6 +45,7 @@ async function deleteOrder(req, res) {
 async function addOrder(req, res) {
 
     var loggedinUser = authService.validateToken(req.cookies.loginToken)
+    console.log(loggedinUser)
     try {
         var order = req.body
         order.byUserId = loggedinUser._id

@@ -12,65 +12,21 @@ module.exports = {
     add
 }
 
-async function query() {
+
+async function query(userId, type) {
     try {
-        // const criteria = _buildCriteria(filterBy)
+        // const criteria = _buildCriteria(userId)
+        const criteria = {}
         const collection = await dbService.getCollection('order')
-        // const orders = await collection.find(criteria).toArray()
-        var orders = await collection.aggregate([
-            {
-                $lookup:
-                {
-                    localField: 'buyerId',
-                    from: 'user',
-                    foreignField: '_id',
-                    as: 'buyer'
-                }
-            },
-            {
-                $unwind: '$buyer'
-            },
-            {
-                $lookup:
-                {
-                    localField: 'stayId',
-                    from: 'stay',
-                    foreignField: '_id',
-                    as: 'stay'
-                }
-            },
-            {
-                $unwind: '$stay'
-            },
-            {
-                $lookup:
-                {
-                    localField: 'hostId',
-                    from: 'user',
-                    foreignField: '_id',
-                    as: 'host'
-                }
-            },
-            {
-                $unwind: '$host'
-            }
-        ]).toArray()
-        orders = orders.map(order => {
-            order.buyer = { _id: order.buyer._id, fullName: order.buyer.fullName };
-            order.stay = { _id: order.stay._id, price: order.stay.price, name: order.stay.name }
-            order.host = { _id: order.host._id, name: order.host.fullName }
-            delete order.buyerId;
-            delete order.stayId;
-            delete order.hostId;
-            return order
-        })
+        var orders = await collection.find(criteria).toArray()
         return orders
     } catch (err) {
+        console.log(err);
         logger.error('cannot find orders', err)
         throw err
     }
-
 }
+
 
 // function _buildCriteria(userId) {
 //     const criteria = {}
