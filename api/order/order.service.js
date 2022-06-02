@@ -12,7 +12,7 @@ module.exports = {
     add
 }
 
-async function query(filterBy = {}) {
+async function query() {
     try {
         // const criteria = _buildCriteria(filterBy)
         const collection = await dbService.getCollection('order')
