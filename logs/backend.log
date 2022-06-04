@@ -936,3 +936,44 @@
 2.6.2022, 14:49:19 - ERROR - Failed to add order | TypeError: Cannot convert undefined or null to object (userId: 6294d815d4a26c96b0b03a76)
 2.6.2022, 14:49:45 - ERROR - while finding user undefined | TypeError: Cannot convert undefined or null to object (userId: 6294d815d4a26c96b0b03a76)
 2.6.2022, 14:49:45 - ERROR - Failed to add order | TypeError: Cannot convert undefined or null to object (userId: 6294d815d4a26c96b0b03a76)
+4.6.2022, 11:56:01 - INFO - Server is running on port: 3030 
+4.6.2022, 12:32:58 - DEBUG - auth.service - login with username: a (userId: 6294d815d4a26c96b0b03a77)
+4.6.2022, 12:32:58 - INFO - User login:  | {"_id":"62966919bec57e566cafcc7a","username":"a","fullname":"a","imgUrl":null,"score":100} (userId: 6294d815d4a26c96b0b03a77)
+4.6.2022, 12:36:25 - INFO - New connected socket [id: _OWkfgu6SmJ8IMk1AAAB] 
+4.6.2022, 12:36:25 - INFO - Setting socket.userId = 62966919bec57e566cafcc7a for socket [id: _OWkfgu6SmJ8IMk1AAAB] 
+4.6.2022, 12:36:41 - INFO - Socket disconnected [id: undefined] 
+4.6.2022, 12:36:42 - INFO - New connected socket [id: fG4INEqtSiHEIzUyAAAD] 
+4.6.2022, 12:36:43 - INFO - Setting socket.userId = 62966919bec57e566cafcc7a for socket [id: fG4INEqtSiHEIzUyAAAD] 
+4.6.2022, 12:39:06 - INFO - Socket disconnected [id: undefined] 
+4.6.2022, 12:39:07 - INFO - New connected socket [id: 6TJepOHe1oX7U8GWAAAF] 
+4.6.2022, 12:39:08 - INFO - Setting socket.userId = 62966919bec57e566cafcc7a for socket [id: 6TJepOHe1oX7U8GWAAAF] 
+4.6.2022, 14:10:21 - INFO - Socket disconnected [id: undefined] 
+4.6.2022, 14:10:22 - INFO - New connected socket [id: SRDGN7KbQ_jP1iuvAAAH] 
+4.6.2022, 14:10:23 - INFO - Setting socket.userId = 62966919bec57e566cafcc7a for socket [id: SRDGN7KbQ_jP1iuvAAAH] 
+4.6.2022, 14:20:25 - DEBUG - auth.service - login with username: a (userId: 62966919bec57e566cafcc7a)
+4.6.2022, 14:20:25 - INFO - User login:  | {"_id":"62966919bec57e566cafcc7a","username":"a","fullname":"a","imgUrl":null,"score":100} (userId: 62966919bec57e566cafcc7a)
+4.6.2022, 14:20:25 - INFO - Setting socket.userId = 62966919bec57e566cafcc7a for socket [id: SRDGN7KbQ_jP1iuvAAAH] 
+4.6.2022, 14:27:38 - INFO - Socket disconnected [id: undefined] 
+4.6.2022, 14:27:39 - INFO - New connected socket [id: NhO98-cyOJUo5kpnAAAJ] 
+4.6.2022, 14:27:40 - INFO - Setting socket.userId = 62966919bec57e566cafcc7a for socket [id: NhO98-cyOJUo5kpnAAAJ] 
+4.6.2022, 14:27:44 - DEBUG - auth.service - login with username: a (userId: 62966919bec57e566cafcc7a)
+4.6.2022, 14:27:44 - INFO - User login:  | {"_id":"62966919bec57e566cafcc7a","username":"a","fullname":"a","imgUrl":null,"score":100} (userId: 62966919bec57e566cafcc7a)
+4.6.2022, 14:27:44 - INFO - Setting socket.userId = 62966919bec57e566cafcc7a for socket [id: NhO98-cyOJUo5kpnAAAJ] 
+4.6.2022, 14:39:39 - INFO - Socket disconnected [id: undefined] 
+4.6.2022, 14:39:40 - INFO - New connected socket [id: iJz-hKi5VreTF6GzAAAL] 
+4.6.2022, 14:39:40 - INFO - Setting socket.userId = 62966919bec57e566cafcc7a for socket [id: iJz-hKi5VreTF6GzAAAL] 
+4.6.2022, 14:42:04 - INFO - Socket disconnected [id: undefined] 
+4.6.2022, 14:42:05 - INFO - New connected socket [id: dZ1IYlnva-ZguAcNAAAN] 
+4.6.2022, 14:42:05 - INFO - Setting socket.userId = 62966919bec57e566cafcc7a for socket [id: dZ1IYlnva-ZguAcNAAAN] 
+4.6.2022, 14:53:37 - INFO - Socket disconnected [id: undefined] 
+4.6.2022, 14:53:38 - INFO - New connected socket [id: iRf7-_thMFtFi2GSAAAP] 
+4.6.2022, 14:53:39 - INFO - Setting socket.userId = 62966919bec57e566cafcc7a for socket [id: iRf7-_thMFtFi2GSAAAP] 
+4.6.2022, 14:53:57 - INFO - Socket disconnected [id: undefined] 
+4.6.2022, 14:53:58 - INFO - New connected socket [id: ief51X-W-r2UmyOaAAAR] 
+4.6.2022, 14:53:58 - INFO - Setting socket.userId = 62966919bec57e566cafcc7a for socket [id: ief51X-W-r2UmyOaAAAR] 
+4.6.2022, 14:56:13 - INFO - Socket disconnected [id: undefined] 
+4.6.2022, 14:56:14 - INFO - New connected socket [id: Vdjp2AEepyDMJ8HlAAAT] 
+4.6.2022, 14:56:14 - INFO - Setting socket.userId = 62966919bec57e566cafcc7a for socket [id: Vdjp2AEepyDMJ8HlAAAT] 
+4.6.2022, 14:58:32 - INFO - Socket disconnected [id: undefined] 
+4.6.2022, 14:58:32 - INFO - New connected socket [id: 3SPp3TTprPzAFDmFAAAV] 
+4.6.2022, 14:58:33 - INFO - Setting socket.userId = 62966919bec57e566cafcc7a for socket [id: 3SPp3TTprPzAFDmFAAAV] 
