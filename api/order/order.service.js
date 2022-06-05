@@ -13,7 +13,7 @@ module.exports = {
 }
 
 
-async function query(userId, type) {
+async function query(userId) {
     try {
         // const criteria = _buildCriteria(userId)
         const criteria = {}
