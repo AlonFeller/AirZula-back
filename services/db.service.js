@@ -1,5 +1,19 @@
 const MongoClient = require('mongodb').MongoClient
 
+// const uri = 'mongodb+srv://Eldar01airzula:yaron1111camar@cluster0.zi0mauo.mongodb.net/?retryWrites=true&w=majority'
+
+// const client = new MongoClient(uri, {useNewUrlParser: true})
+// client.connect (err => {
+//     console.log('connected to mongo')
+//     const collection = client.db('arizula_db').collection('stay')
+//     collection.find().toArray()
+//         .then(res =>  console.log(res))
+//     client.close() 
+// })
+
+
+
+
 const config = require('../config')
 
 module.exports = {

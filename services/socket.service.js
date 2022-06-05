@@ -39,7 +39,6 @@ function setupSocketAPI(http) {
             const id = order.host.id
             console.log('New order for host', id);
             gIo.to(id).emit('order recieved', order)
-            // socket.emit('order ordered', order)
             
             
         })
