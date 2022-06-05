@@ -45,21 +45,21 @@ async function deleteStay(req, res) {
 async function addStay(req, res) {
 
     console.log('got to controller');
-    var loggedinUser = authService.validateToken(req.cookies.loginToken)
+    // var loggedinUser = authService.validateToken(req.cookies.loginToken)
     try {
         var stay = req.body
-        stay.byUserId = loggedinUser._id
+        // stay.byUserId = loggedinUser._id
         stay = await stayService.add(stay)
         
         // prepare the updated stay for sending out
-        stay.aboutUser = await userService.getById(stay.aboutUserId)
+        // stay.aboutUser = await userService.getById(stay.aboutUserId)
 
-        loggedinUser = await userService.update(loggedinUser)
-        stay.byUser = loggedinUser
+        // loggedinUser = await userService.update(loggedinUser)
+        // stay.byUser = loggedinUser
 
         // User info is saved also in the login-token, update it
-        const loginToken = authService.getLoginToken(loggedinUser)
-        res.cookie('loginToken', loginToken)
+        // const loginToken = authService.getLoginToken(loggedinUser)
+        // res.cookie('loginToken', loginToken)
 
         res.send(stay)
 

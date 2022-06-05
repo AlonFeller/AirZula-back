@@ -10,8 +10,8 @@ const router = express.Router()
 router.get('/', getStays)
 router.get('/:id', getStayById)
 router.put('/:id', requireAuth,  updateStay)
-router.post('/', requireAuth,  addStay)
-// router.post('/',   addStay)
-router.delete('/:id',  requireAuth, deleteStay)
+// router.post('/', requireAuth,  addStay)
+router.post('/',   addStay)
+router.delete('/:id',   deleteStay)
 
 module.exports = router

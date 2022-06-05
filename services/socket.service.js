@@ -13,7 +13,7 @@ function setupSocketAPI(http) {
         socket.on('disconnect', socket => {
             logger.info(`Socket disconnected [id: ${socket.id}]`)
         })
-        socket.on('chat-set-topic', topic => {
+        socket.on('set-user', topic => {
             if (socket.myTopic === topic) return
             if (socket.myTopic) {
                 socket.leave(socket.myTopic)
@@ -21,6 +21,7 @@ function setupSocketAPI(http) {
             }
             socket.join(topic)
             socket.myTopic = topic
+            console.log('my topic', socket.myTopic);
         })
         socket.on('chat-send-msg', msg => {
             logger.info(`New chat msg from socket [id: ${socket.id}], emitting to topic ${socket.myTopic}`)
@@ -34,9 +35,18 @@ function setupSocketAPI(http) {
             socket.join('watching:' + userId)
             
         })
+        socket.on('new order', order => {
+            const id = order.host.id
+            console.log('New order for host', id);
+            gIo.to(id).emit('order recieved', order)
+            // socket.emit('order ordered', order)
+            
+            
+        })
         socket.on('set-user-socket', userId => {
             logger.info(`Setting socket.userId = ${userId} for socket [id: ${socket.id}]`)
             socket.userId = userId
+
         })
         socket.on('unset-user-socket', () => {
             logger.info(`Removing socket.userId for socket [id: ${socket.id}]`)
