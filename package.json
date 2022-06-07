@@ -11,6 +11,7 @@
     },
     "author": "Me",
     "license": "ISC",
+    "engines": { "npm": "6.x", "node": "12.x" },
     "dependencies": {
         "bcrypt": "^5.0.0",
         "cloudinary-core": "^2.12.3",
