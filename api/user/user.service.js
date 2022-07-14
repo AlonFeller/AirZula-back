@@ -75,10 +75,6 @@ async function remove(userId) {
 //update only favorites (to save password)
 async function update(user) {
     try {
-        // peek only updatable properties
-        // const prevUser = getById(user._id)
-        // prevUser.favorites = [user.favorites]
-        // pervUser._id = ObjectId(user._id)
         const userToSave = {
             _id: ObjectId(user._id), // needed for the returnd obj
             favorites: user.favorites           
@@ -92,23 +88,6 @@ async function update(user) {
     }
 }
 
-// original 
-// async function update(user) {
-//     try {
-//         // peek only updatable properties
-//         const userToSave = {
-//             _id: ObjectId(user._id), // needed for the returnd obj
-//             fullname: user.fullname,
-//             score: user.score,
-//         }
-//         const collection = await dbService.getCollection('user')
-//         await collection.updateOne({ _id: userToSave._id }, { $set: userToSave })
-//         return userToSave
-//     } catch (err) {
-//         logger.error(`cannot update user ${user._id}`, err)
-//         throw err
-//     }
-// }
 
 async function add(user) {
     try {

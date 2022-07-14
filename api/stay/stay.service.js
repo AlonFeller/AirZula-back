@@ -1,7 +1,6 @@
 add
 const dbService = require('../../services/db.service')
 const logger = require('../../services/logger.service')
-// const reviewService = require('../review/review.service')
 const ObjectId = require('mongodb').ObjectId
 
 module.exports = {
@@ -17,14 +16,10 @@ async function query(filterBy = {}) {
     try {
         const  collection = await dbService.getCollection('stay')
         let stays = await collection.find(criteria).toArray()
-        // let stays = await collection.find({}).toArray()
-        // let stays = collection.toArray()
         if (!stays.length) {
               stays = require("../../data/stay.json")
             collection.insertMany(stays)
         } 
-        //change later to filter from mongo
-        // console.log('stays from query', stays.length);
         return stays
     } catch (err) {
         logger.error('cannot find stays', err)

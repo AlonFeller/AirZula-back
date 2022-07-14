@@ -15,7 +15,6 @@ module.exports = {
 
 async function query(userId) {
     try {
-        // const criteria = _buildCriteria(userId)
         const criteria = {}
         const collection = await dbService.getCollection('order')
         var orders = await collection.find(criteria).toArray()
@@ -26,13 +25,6 @@ async function query(userId) {
         throw err
     }
 }
-
-
-// function _buildCriteria(userId) {
-//     const criteria = {}
-//     if (filterBy.byUserId) criteria.byUserId = filterBy.byUserId
-//     return criteria
-// }
 
 async function getById(orderId) {
     try {
